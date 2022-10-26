@@ -119,7 +119,13 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
+function addList(){
+  let total = 0;
+  for (var argument of arguments){
+    total = argument + total
+  }
+  return total
+}
 
 
 /*-----------------------------------------------------------------
@@ -143,7 +149,9 @@ computeRemainder(10.5, 3) //=> 1.5
 // Your solution for 05-computeRemainder:
 
 
-
+function computerRemainder() {
+  
+}
 
 
 /*-----------------------------------------------------------------
