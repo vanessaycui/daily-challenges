@@ -181,7 +181,18 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
+function range(start, end){
+  let arr = [];
+  if (start <= end){
+    for (let i=start; i< end; i++){
+      arr.push(i)
+    }
+    return arr
+  } else {
+    return "First argument must be less than second"
 
+  }
+}
 
 
 
@@ -192,7 +203,7 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse orderand converts all characters to uppercase.
+- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse order and converts all characters to uppercase.
 
 Examples:
 
