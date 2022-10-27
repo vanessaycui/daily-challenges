@@ -59,9 +59,9 @@ addTwoNumbers('Hello', 5) //=> NaN
 // Your solution for 02-addTwoNumbers here:
 
 function addTwoNumbers(num1, num2) {
-  if (num1 && num2){
+  if (typeof num1 ==="number" && typeof num2 === 'number'){
     return num1 + num2
-  } else {
+  } else{
     return NaN
   }
   
@@ -149,9 +149,17 @@ computeRemainder(10.5, 3) //=> 1.5
 // Your solution for 05-computeRemainder:
 
 
-function computerRemainder() {
+function computeRemainder(num1, num2) {
+  
+  if (num2 === 0){
+    return Infinity
+  } else {
+    return num1-Math.floor(num1/num2) * num2
+  }
   
 }
+
+
 
 
 /*-----------------------------------------------------------------
