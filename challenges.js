@@ -300,6 +300,18 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 // Your solution for 10-formatWithPadding here:
 
 
+function formatWithPadding(num, char, numPad) {
+  let numStr = num.toString();
+  let finalStr = "";
+  if (numStr.length < numPad) {
+    for (let i = 0; i < (numPad - numStr.length); i++){
+      finalStr = finalStr + char;
+    }
+    return finalStr + numStr
+  }
+
+  return numStr
+}
 
 
 
