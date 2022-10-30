@@ -235,6 +235,15 @@ removeEnds('a'); //=> "" (empty string)
 // Your solution for 08-removeEnds here:
 
 
+function removeEnds(string){
+  if (string.length< 3) {
+    return ""
+  }
+  let arr = string.split("")
+  arr.pop()
+  arr.shift()
+  return arr.join("")
+}
 
 
 
