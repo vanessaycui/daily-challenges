@@ -267,7 +267,14 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 // Your solution for 09-charCount here:
 
 
-
+function charCount(string){
+  let hashMap = {}
+  for (let letter of string){
+    if (!hashMap[letter]) hashMap[letter] =0
+    hashMap[letter]++             
+  }
+  return hashMap
+}
 
 
 /*-----------------------------------------------------------------
