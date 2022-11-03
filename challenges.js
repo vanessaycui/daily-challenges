@@ -336,7 +336,21 @@ isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
+function isPalindrome(string){
+  let leftIdx = 0;
+  let rightIdx = length.string-1;
 
+  while (leftIdx !== rightIdx) {
+    if (string[leftIdx] != string[rightIdx]){
+      return false
+    }
+    leftIdx++
+    rightIdx--
+  }
+
+  return true
+
+}
 
 
 
