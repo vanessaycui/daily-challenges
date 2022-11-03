@@ -347,7 +347,7 @@ function isPalindrome(string){
 
   let leftIdx = 0;
   let rightIdx = string.length-1;
-  
+
   while (leftIdx !== rightIdx) {
     if (string[leftIdx].toUpperCase() != string[rightIdx].toUpperCase()){
       return false
@@ -383,7 +383,19 @@ hammingDistance('abc', 'ab'); //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 12-hammingDistance here:
 
+function hammingDistance(string1, string2){
+  if (string1.length != string2.length){
+    return NaN
+  }
+  let diffCount=0;
+  for (let i=0; i< string1.length; i++){
+    if (string1[i] !== string2[i]){
+      diffCount++
+    }
+  }
 
+  return diffCount
+}
 
 
 
