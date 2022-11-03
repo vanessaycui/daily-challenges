@@ -419,8 +419,22 @@ mumble('!A 2'); //=> '!-AA-   -2222'
 -----------------------------------------------------------------*/
 // Your solution for 13-mumble here:
 
+function mumble(str){
+let newStr=''
+  for (let i = 0; i<str.length; i++){
+    if (i==0){
+      newStr = str[i]
+    } else {
+      newStr = newStr + '-'
+      for (let j = 0; j<=i; j++){
+        newStr = newStr+str[i]
+      } 
+    }
+  }
+  return newStr
+}
 
-
+console.log(mumble('!A 2'))
 
 
 /*-----------------------------------------------------------------
