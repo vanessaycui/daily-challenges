@@ -337,20 +337,27 @@ isPalindrome(''); //=> true
 // Your solution for 11-isPalindrome here:
 
 function isPalindrome(string){
-  let leftIdx = 0;
-  let rightIdx = length.string-1;
 
+
+  while (string.includes(' ')) string = string.replace(' ','')
+
+  if (string.length ===0 || string.length ===1){
+    return true
+  }
+
+  let leftIdx = 0;
+  let rightIdx = string.length-1;
+  
   while (leftIdx !== rightIdx) {
-    if (string[leftIdx] != string[rightIdx]){
+    if (string[leftIdx].toUpperCase() != string[rightIdx].toUpperCase()){
       return false
     }
     leftIdx++
     rightIdx--
   }
-
   return true
-
 }
+
 
 
 
