@@ -433,7 +433,6 @@ let newStr=''
   }
   return newStr
 }
-
 console.log(mumble('!A 2'))
 
 
@@ -457,7 +456,13 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 
 
 
-
+function fromPairs(arr) {
+  let newObj = {};
+  arr.forEach((element)=>{
+    newObj[element[0]] = element[1]
+  })
+  return newObj
+}
 
 /*-----------------------------------------------------------------
 Challenge: 15-mergeObjects
