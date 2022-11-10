@@ -566,8 +566,12 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 -----------------------------------------------------------------*/
 // Your solution for 17-mapArray here:
 
-
-
+function mapArray(arr, cb){
+  for (let i = 0; i< arr.length; i++){
+    arr[i] = cb(arr[i], i)
+  }
+  return arr
+}
 
 
 /*-----------------------------------------------------------------
