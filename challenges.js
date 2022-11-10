@@ -433,7 +433,6 @@ let newStr=''
   }
   return newStr
 }
-console.log(mumble('!A 2'))
 
 
 /*-----------------------------------------------------------------
@@ -482,9 +481,17 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c:
 -----------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
 
+function mergeObjects(...args) {
+  let combined = args[0]
+  args.forEach(arg => {
+    for (key in arg) {
+      combined[key] = arg[key]
+    }
+  })
 
-
-
+  return combined
+  
+}
 
 /*-----------------------------------------------------------------
 Challenge: 16-findHighestPriced
