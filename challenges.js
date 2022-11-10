@@ -526,8 +526,17 @@ findHighestPriced([
 -----------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
 
-
-
+function findHighestPriced(arr){
+  let idx= 0;
+  let maxPrice = 0;
+  for (let i =0; i<arr.length; i++){
+    if (arr[i].price > maxPrice){
+      idx = i
+      maxPrice = arr[i].price
+    }    
+  }
+  return arr[idx]
+}
 
 
 /*-----------------------------------------------------------------
