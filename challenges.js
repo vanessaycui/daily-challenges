@@ -676,6 +676,22 @@ primeFactors(200) //=> [2, 2, 2, 5, 5]
 -----------------------------------------------------------------*/
 // Your solution for 21-primeFactors here:
 
+function primeFactors(num) {
+  let arr = []
+  let result = num
+  if (num>1 && num % 1 === 0){
+    for (let i = 2; i<=num; i++){
+      while (result%i === 0 && result > i){
+        arr.push(i)
+        result = result/i
+      } 
+    }
+    arr.push(result)
+
+  }
+  return arr
+}
+console.log(primeFactors(105))
 /*-----------------------------------------------------------------
 Challenge: 22-intersection
 
