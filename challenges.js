@@ -651,7 +651,6 @@ function isPrime(num) {
   return false
 }
 
-console.log(isPrime(29))
 /*-----------------------------------------------------------------
 Challenge: 21-primeFactors
 
@@ -691,7 +690,6 @@ function primeFactors(num) {
   }
   return arr
 }
-console.log(primeFactors(105))
 /*-----------------------------------------------------------------
 Challenge: 22-intersection
 
@@ -712,6 +710,21 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------*/
 // Your solution for 22-intersection here:
+
+function intersection(arr1, arr2){
+  let combined = []
+  let arr2indx = []
+  for (let i =0; i<arr1.length; i++){
+    for (let j=0; j<arr2.length; j++){
+      if (arr1[i] === arr2[j] && arr2indx.includes(j) === false){
+          combined.push(arr1[i])
+          arr2indx.push(j)
+      }
+    }
+  }
+  return combined
+}
+
 
 /*-----------------------------------------------------------------
 Challenge: 23-balancedBrackets
