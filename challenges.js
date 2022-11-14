@@ -871,7 +871,7 @@ function getNumForIP(str){
 
 }
 
-console.log(getNumForIP( '0.0.0.1' )) // => 1)
+//console.log(getNumForIP( '0.0.0.1' )) // => 1)
 
 
 /*-----------------------------------------------------------------
@@ -897,6 +897,29 @@ toCamelCase( 'A_b_c' ) // => 'ABC'
 -----------------------------------------------------------------*/
 // Your solution for 26-toCamelCase here:
 
+
+function toCamelCase(str) {
+  let newstr = [];
+  let index = [];
+
+  for (i = 0; i < str.length; i++){
+    if (str[i] ==="-" || str[i] === "_"){
+      index.push(i)
+    } else if (i == index.shift()+1){
+      newstr.push(str[i].toUpperCase())
+    } else{
+
+      newstr.push(str[i])
+    }
+
+  }
+
+  return newstr.join("")
+
+
+}
+
+console.log(toCamelCase( 'A_b_c' )  )
 /*-----------------------------------------------------------------
 Challenge: 27-countTheBits
 
@@ -922,6 +945,12 @@ countTheBits( 255 ) //=> 8
 countTheBits( 65535 )  //=> 16
 -----------------------------------------------------------------*/
 // Your solution for 27-countTheBits here:
+
+
+function countTheBits(num){
+  
+}
+
 
 /*-----------------------------------------------------------------
 Challenge: 28-gridTrip
