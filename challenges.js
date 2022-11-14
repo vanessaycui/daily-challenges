@@ -855,6 +855,25 @@ getNumForIP( '10.0.0.1' ) // => 167772161
 -----------------------------------------------------------------*/
 // Your solution for 25-getNumForIP here:
 
+function getNumForIP(str){
+
+  let arr = str.split(".")
+  let num = 3;
+  let total = 0
+  arr.forEach(el=>{
+    total = total+ parseInt(el)*(256**num)
+    console.log(total)
+    num = num -1
+
+  })
+
+  return total
+
+}
+
+console.log(getNumForIP( '0.0.0.1' )) // => 1)
+
+
 /*-----------------------------------------------------------------
 Challenge: 26-toCamelCase
 
