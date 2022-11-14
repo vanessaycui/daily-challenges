@@ -772,7 +772,6 @@ function balancedBrackets(str) {
       } else {
         stack.unshift(str[i])
       }
-      
     }
   }
   if (stack.length === 0) return true
@@ -809,6 +808,26 @@ isWinningTicket( [ ['ABC', 66], ['dddd', 100], ['Hello', 108] ] ) // => true
 isWinningTicket( [ ['ABC', 66], ['dddd', 15], ['Hello', 108] ] ) // => false
 -----------------------------------------------------------------*/
 // Your solution for 24-isWinningTicket here:
+function isWinningTicket(arr){
+
+  for (let i = 0; i< arr.length; i++){
+
+    let strArr = arr[i][0].split("")
+    let match = false;
+ 
+    strArr.forEach( char => {
+      if (char===String.fromCharCode(arr[i][1])){
+        match = true;
+      }
+    })
+
+    if (match === false){
+      return false
+    }
+  }
+  return true
+}
+
 
 /*-----------------------------------------------------------------
 Challenge: 25-getNumForIP
