@@ -1005,7 +1005,7 @@ function gridTrip(arr, str){
   }
   return arr
 }
-console.log(gridTrip( [5, 10], 'D5L15U2' ))
+//console.log(gridTrip( [5, 10], 'D5L15U2' ))
 /*-----------------------------------------------------------------
 Challenge: 29-addChecker
 
@@ -1031,6 +1031,18 @@ addChecker( [10, 15, 16, 22], 32 ) // => true
 addChecker( [10, 15, 16, 22], 19 ) // => false
 -----------------------------------------------------------------*/
 // Your solution for 29-addChecker here:
+
+function addChecker(arr, num){
+  for (let i = 0; i<arr.length; i++){
+    for (let j = 1; j< arr.length; j++){
+      if (arr[i]+ arr[j] === num){
+        return true
+      }
+    }
+  }
+  return false
+}
+
 
 /*-----------------------------------------------------------------
 Challenge: 30-totalTaskTime
@@ -1059,3 +1071,7 @@ totalTaskTime( [2, 2, 3, 3, 4, 4], 2 ) //=> 9
 totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 -----------------------------------------------------------------*/
 // Your solution for 30- here:
+
+function totalTaskTime(arr, num){
+
+}
