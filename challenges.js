@@ -1074,4 +1074,18 @@ totalTaskTime( [5, 2, 6, 8, 7, 2], 3 ) // => 12
 
 function totalTaskTime(arr, num){
 
+  let threads = Array(num).fill(0)
+
+  arr.forEach(task => {
+    
+    let mini = Math.min(...threads)
+    let idx = threads.indexOf(mini)
+    threads[idx] = task + threads[idx]
+
+
+
+  })
+
+  return Math.max(...threads)
+
 }
