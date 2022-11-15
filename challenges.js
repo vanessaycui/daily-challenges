@@ -948,11 +948,19 @@ countTheBits( 65535 )  //=> 16
 
 
 function countTheBits(num){
+  let rep = num.toString(2).split("")
+  let count = 0;
 
-  
+  for (let i = 0; i< rep.length; i++){
+    if (rep[i]==="1"){
+      count++
+    }
+  }
+
+  return count
 }
 
-
+console.log(countTheBits( 255 ))
 /*-----------------------------------------------------------------
 Challenge: 28-gridTrip
 
